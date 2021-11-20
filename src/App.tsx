@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "./App.css";
+import { Post } from "./components/Post";
 import { useAppDispatch, useAppSelector } from "./hooks/redux";
 import { fetchUsers } from "./store/reducers/ActionCreators";
 import { userSlice } from "./store/reducers/UserSlice";
@@ -15,9 +16,10 @@ function App() {
   }, []);
   return (
     <>
-      {isLoading && "Loading..."}
+      {/* {isLoading && "Loading..."}
       {error && <h1>{error}</h1>}
-      {JSON.stringify(users)}
+      {JSON.stringify(users)} */}
+      <Post />
     </>
   );
 }
